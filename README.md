@@ -1,8 +1,8 @@
 <h1 align="center"><img src="https://jmeter.apache.org/images/logo.svg" alt="Apache JMeter logo" /></h1>
 
-An Open Source Java application designed to measure performance and load test applications.
+Performansı ölçmek ve uygulamaların yük testini yapmak için tasarlanmış açık kaynak kodlu bir Java uygulaması.
 
-By The Apache Software Foundation
+Apache Yazılım Vakfı Tarafından
 
 [![Build Status](https://api.travis-ci.com/apache/jmeter.svg?branch=master)](https://travis-ci.com/apache/jmeter/)
 [![codecov](https://codecov.io/gh/apache/jmeter/branch/master/graph/badge.svg)](https://codecov.io/gh/apache/jmeter)
@@ -12,155 +12,152 @@ By The Apache Software Foundation
 [![Javadocs](https://www.javadoc.io/badge/org.apache.jmeter/ApacheJMeter_core.svg)](https://www.javadoc.io/doc/org.apache.jmeter/ApacheJMeter_core)
 [![Twitter](https://img.shields.io/twitter/url/https/github.com/apache/jmeter.svg?style=social)](https://twitter.com/intent/tweet?text=Powerful%20load%20testing%20with%20Apache%20JMeter:&url=https://jmeter.apache.org)
 
-## What Is It?
+## Nedir?
 
-Apache JMeter can measure performance and load test static and dynamic web applications.
+Apache JMeter, performansı ölçebilir ve statik ve dinamik web uygulamalarının yük testini yapabilir.
 
-It can be used to simulate a heavy load on a server, group of servers,
-network or object to test its strength or to analyze overall performance under different load types.
+Bir sunucu, sunucu grubu, ağ veya nesne üzerindeki ağır yükü simüle etmek, gücünü test etmek veya farklı yük türleri
+altında genel performansı analiz etmek için kullanılabilir.
 
 ![JMeter screen](https://raw.githubusercontent.com/apache/jmeter/master/xdocs/images/screenshots/jmeter_screen.png)
 
-## Features
+## Özellikler
 
-Complete portability and 100% Java.
+Tam taşınabilirlik ve %100 Java.
 
-Multi-threading allows concurrent sampling by many threads and
-simultaneous sampling of different functions by separate thread groups.
+Çoklu iş parçacığı, birçok iş parçacığı tarafından eş zamanlı örneklemeye ve
+ayrı iş parçacığı grupları tarafından farklı işlevlerin eş zamanlı örneklemesine olanak tanır.
 
-### Protocols
+### Protokoller
 
-Ability to load and performance test many applications/server/protocol types:
+Birçok uygulama/sunucu/protokol türünü yükleme ve performans testi yapma yeteneği:
 
 - Web - HTTP, HTTPS (Java, NodeJS, PHP, ASP.NET,...)
-- SOAP / REST Webservices
+- SOAP / REST Web servisleri
 - FTP
-- Database via JDBC
+- JDBC aracılığıyla veritabanı
 - LDAP
-- Message-oriented Middleware (MOM) via JMS
-- Mail - SMTP(S), POP3(S) and IMAP(S)
-- Native commands or shell scripts
+- JMS aracılığıyla mesaj odaklı ara yazılım (MOM)
+- Posta - SMTP(S), POP3(S) ve IMAP(S)
+- Yerel komutlar veya kabuk betikleri
 - TCP
-- Java Objects
+- Java Nesneleri
 
 ### IDE
 
-Fully featured Test IDE that allows fast Test Plan **recording**
- (from Browsers or native applications), **building** and **debugging**.
+Tam özellikli Test IDE'si, hızlı Test Planı **kaydı** (Tarayıcılardan veya yerel uygulamalardan), 
+**oluşturma** ve **hata ayıklama** olanağı sağlar.
 
-### Command Line
+### Komut Satırı
 
-[Command-line mode (Non GUI / headless mode)](https://jmeter.apache.org/usermanual/get-started.html#non_gui)
-to load test from any Java compatible OS (Linux, Windows, Mac OSX, ...)
+[Komut satırı modu (GUI olmayan / başsız mod)](https://jmeter.apache.org/usermanual/get-started.html#non_gui)
+Herhangi bir Java uyumlu işletim sisteminden (Linux, Windows, Mac OSX, ...) test yüklemek için
 
-### Reporting
+### Raporlama
 
-A complete and ready to present [dynamic HTML report](https://jmeter.apache.org/usermanual/generating-dashboard.html)
+Tamamlanmış ve sunulmaya hazır [dinamik HTML raporu](https://jmeter.apache.org/usermanual/generating-dashboard.html)
 
-![Dashboard screenshot](https://raw.githubusercontent.com/apache/jmeter/master/xdocs/images/screenshots/dashboard/response_time_percentiles_over_time.png)
+![Pano ekran görüntüsü](https://raw.githubusercontent.com/apache/jmeter/master/xdocs/images/screenshots/dashboard/response_time_percentiles_over_time.png)
 
-[Live reporting](https://jmeter.apache.org/usermanual/realtime-results.html)
+[Canlı raporlama](https://jmeter.apache.org/usermanual/realtime-results.html)
 into 3rd party databases like InfluxDB or Graphite
 
-![Live report](https://raw.githubusercontent.com/apache/jmeter/master/xdocs/images/screenshots/grafana_dashboard.png)
+![Canlı rapor](https://raw.githubusercontent.com/apache/jmeter/master/xdocs/images/screenshots/grafana_dashboard.png)
 
-### Correlation
+### Korelasyon
 
-Easy correlation through ability to extract data from most popular response formats,
+En popüler yanıt formatlarından veri çıkarma yeteneği sayesinde kolay korelasyon,
 [HTML](https://jmeter.apache.org/usermanual/component_reference.html#CSS/JQuery_Extractor),
 [JSON](https://jmeter.apache.org/usermanual/component_reference.html#JSON_Extractor),
 [XML](https://jmeter.apache.org/usermanual/component_reference.html#XPath_Extractor) or
 [any textual format](https://jmeter.apache.org/usermanual/component_reference.html#Regular_Expression_Extractor)
 
-### Highly Extensible Core
+### Son Derece Genişletilebilir Çekirdek
 
-- Pluggable Samplers allow unlimited testing capabilities.
-- **Scriptable Samplers** (JSR223-compatible languages like Groovy).
-- Several load statistics can be chosen with **pluggable tiers**.
-- Data analysis and **visualization plugins** allow great extensibility and personalization.
-- Functions can be used to provide dynamic input to a test or provide data manipulation.
-- Easy Continuous Integration via 3rd party Open Source libraries for Maven, Gradle and Jenkins.
+- Takılabilir Örnekleyiciler sınırsız test yeteneklerine izin verir.
+- **Komut Dosyası Oluşturulabilir Örnekleyiciler** (Groovy gibi JSR223 uyumlu diller).
+- **Takılabilir katmanlar** ile çeşitli yük istatistikleri seçilebilir.
+- Veri analizi ve **görselleştirme eklentileri** büyük genişletilebilirlik ve kişiselleştirme sağlar.
+- Fonksiyonlar bir teste dinamik girdi sağlamak veya veri manipülasyonu sağlamak için kullanılabilir.
+- Maven, Gradle ve Jenkins için 3. taraf Açık Kaynaklı kütüphaneler aracılığıyla Kolay Sürekli Entegrasyon.
 
-## The Latest Version
+## En Son Sürüm
 
-Details of the latest version can be found on the
-[JMeter Apache Project web site](https://jmeter.apache.org/)
+En son sürümün ayrıntıları şu adreste bulunabilir:
+[JMeter Apache Projesi web sitesi](https://jmeter.apache.org/)
 
-## Requirements
+## Gereksinimler
 
-The following requirements exist for running Apache JMeter:
+Apache JMeter'ı çalıştırmak için aşağıdaki gereksinimler mevcuttur:
 
-- Java Interpreter:
+- Java Yorumlayıcısı:
 
-  A fully compliant Java 17 Runtime Environment is required
-  for Apache JMeter to execute. A JDK with `keytool` utility is better suited
-  for Recording HTTPS websites.
+Apache JMeter'ın çalışması için tamamen uyumlu bir Java 17 Çalışma Ortamı gereklidir. 
+`keytool` yardımcı programına sahip bir JDK, HTTPS web sitelerini kaydetmek için daha uygundur.
 
-- Optional jars:
+- İsteğe bağlı jar'lar:
 
-  Some jars are not included with JMeter.
-  If required, these should be downloaded and placed in the lib directory
-  - JDBC - available from the database supplier
-  - JMS - available from the JMS provider
+Bazı jar'lar JMeter'a dahil değildir.
+Gerekirse, bunlar indirilmeli ve lib dizinine yerleştirilmelidir
+- JDBC - veritabanı tedarikçisinden edinilebilir
+- JMS - JMS sağlayıcısından edinilebilir
   - [Bouncy Castle](https://www.bouncycastle.org/) -
-  only needed for SMIME Assertion
+  sadece SMIME Assertion için gereklidir
 
-- Java Compiler (*OPTIONAL*):
+- Java Derleyicisi (*İSTEĞE BAĞLI*):
 
-  A Java compiler is not needed since the distribution includes a
-  precompiled Java binary archive.
-  > **Note** that a compiler is required to build plugins for Apache JMeter.
+Dağıtım önceden derlenmiş bir Java ikili arşivi içerdiğinden bir Java derleyicisine gerek yoktur.
+> **Not** Apache JMeter için eklentiler oluşturmak için bir derleyicinin gerekli olduğunu unutmayın.
 
-## Installation Instructions
+## Kurulum Talimatları
 
-> **Note** that spaces in directory names can cause problems.
+> **Not** dizin adlarındaki boşluklar sorunlara neden olabilir.
 
-- Release builds
+- Sürüm derlemeleri
 
-  Unpack the binary archive into a suitable directory structure.
+İkili arşivi uygun bir dizin yapısına açın.
 
-## Running JMeter
+## JMeter'ı Çalıştırma
 
-1. Change to the `bin` directory
-2. Run the `jmeter` (Un\*x) or `jmeter.bat` (Windows) file.
+1. `bin` dizinine geçin
+2. `jmeter` (Un\*x) veya `jmeter.bat` (Windows) dosyasını çalıştırın.
 
 ### Windows
 
-For Windows, there are also some other scripts which you can drag-and-drop
-a JMX file onto:
+Windows için, bir JMX dosyasını sürükleyip bırakabileceğiniz
+başka bazı betikler de vardır:
 
-- `jmeter-n.cmd` - runs the file as a non-GUI test
-- `jmeter-n-r.cmd` - runs the file as a non-GUI remote (client-server) test
-- `jmeter-t.cmd` - loads the file ready to run it as a GUI test
+- `jmeter-n.cmd` - dosyayı GUI olmayan bir test olarak çalıştırır
+- `jmeter-n-r.cmd` - dosyayı GUI olmayan bir uzak (istemci-sunucu) test olarak çalıştırır
+- `jmeter-t.cmd` - dosyayı GUI testi olarak çalıştırmaya hazır şekilde yükler
 
-## Documentation
+## Belgeler
 
-The documentation available as of the date of this release is
-also included, in HTML format, in the [printable_docs](printable_docs) directory,
-and it may be browsed starting from the file called [index.html](printable_docs/index.html).
+Bu sürümün tarihi itibariyle mevcut olan belgeler, 
+[printable_docs](printable_docs) dizininde HTML biçiminde de yer almaktadır
+ve [index.html](printable_docs/index.html) adlı dosyadan başlayarak taranabilir.
 
-## Reporting a bug/enhancement
+## Bir hata/geliştirme bildirme
 
-See [Issue Tracking](https://jmeter.apache.org/issues.html).
+[Sorun Takibi] bölümüne bakın
+(https://jmeter.apache.org/issues.html).
 
-## Build instructions
+## Yapım talimatları
 
-### Release builds
+### Yapıları yayınla
 
-Unpack the source archive into a suitable directory structure.
-Most of the 3rd party library files can be extracted from the binary archive
-by unpacking it into the same directory structure.
+Kaynak arşivini uygun bir dizin yapısına açın.
+3. parti kütüphane dosyalarının çoğu ikili arşivden aynı dizin yapısına açılarak çıkarılabilir.
 
-Any optional jars (see above) should be placed in `lib/opt` and/or `lib`.
+İsteğe bağlı jar'lar (yukarıya bakın) `lib/opt` ve/veya `lib` içine yerleştirilmelidir.
 
-Jars in `lib/opt` will be used for building JMeter and running the unit tests,
-but won't be used at run-time.
+`lib/opt` içindeki jar'lar JMeter'ı derlemek ve birim testlerini çalıştırmak için kullanılacaktır,
+ancak çalışma zamanında kullanılmayacaktır.
 
-_This is useful for testing what happens if the optional jars are not
-downloaded by other JMeter users._
+_Bu, isteğe bağlı jar'ların diğer JMeter kullanıcıları tarafından indirilmemesi durumunda ne olacağını test etmek için yararlıdır._
 
-If you are behind a proxy, you can set a few build properties in
-`~/.gradle/gradle.properties` for Gradle to use the proxy:
+Bir proxy'nin arkasındaysanız, Gradle'ın proxy'yi kullanması için 
+`~/.gradle/gradle.properties` dizininde birkaç yapı özelliği ayarlayabilirsiniz:
 
 ```properties
 systemProp.http.proxyHost=proxy.example.invalid
@@ -173,118 +170,104 @@ systemProp.https.proxyUser=your_user_name
 systemProp.https.proxyPassword=your_password
 ```
 
-### Test builds
+### Test yapıları
 
-JMeter is built using Gradle, and it uses [Gradle's Toolchains for JVM projects](https://docs.gradle.org/current/userguide/toolchains.html)
-for provisioning JDKs. It means the code would search for the needed JDKs locally, or download them
-if they are not found.
+JMeter, Gradle kullanılarak oluşturulmuştur ve [JVM projeleri için Gradle'ın Araç Zincirlerini] kullanır 
+(https://docs.gradle.org/current/userguide/toolchains.html)
+JDK'ları sağlamak için. Bu, kodun ihtiyaç duyulan JDK'ları yerel olarak arayacağı veya
+bulunmazsa indireceği anlamına gelir.
 
-By default, the code would use JDK 17 for build purposes, however it would set the target release to 8,
-so the resulting artifacts would be compatible with Java 8.
+Varsayılan olarak, kod derleme amaçları için JDK 17'yi kullanır, ancak hedef sürümü 8 olarak ayarlar,
+bu nedenle ortaya çıkan eserler Java 8 ile uyumlu olur.
 
-The following command builds and tests JMeter:
+Aşağıdaki komut JMeter'ı derler ve test eder:
 
 ```sh
 ./gradlew build
 ```
 
-If you want to use a custom JDK for building you can set `-PjdkBuildVersion=11`,
-and you can select `-PjdkTestVersion=21` if you want to use a different JDK for testing.
+Derleme için özel bir JDK kullanmak istiyorsanız `-PjdkBuildVersion=11` ayarlayabilirsiniz,
+ve test için farklı bir JDK kullanmak istiyorsanız `-PjdkTestVersion=21` seçebilirsiniz.
 
-You can list the available build parameters by executing
+Mevcut yapı parametrelerini şu komutu çalıştırarak listeleyebilirsiniz:
 
 ```sh
-./gradlew parameters
+./gradlew parametreleri
 ```
 
-If the system does not have a GUI display then:
+Sistemin bir GUI ekranı yoksa:
 
 ```sh
 ./gradlew build -Djava.awt.headless=true
 ```
 
-The output artifacts (jars, reports) are placed in the `build` folder.
-For instance, binary artifacts can be found under `src/dist/build/distributions`.
+Çıktı eserleri (jar'lar, raporlar) `build` klasörüne yerleştirilir.
 
-The following command would compile the application and enable you to run `jmeter`
-from the `bin` directory.
+Örneğin, ikili eserler `src/dist/build/distributions` altında bulunabilir.
 
-> **Note** that it completely refreshes `lib/` contents,
-so it would remove custom plugins should you have them installed to `lib/`. However, it would keep `lib/ext/` plugins intact.
+Aşağıdaki komut uygulamayı derler ve `jmeter`'ı `bin` dizininden çalıştırmanızı sağlar.
+
+> **Not** `lib/` içeriklerini tamamen yeniler,
+bu nedenle `lib/` dizinine yüklediyseniz özel eklentileri kaldırır. Ancak `lib/ext/` eklentilerini olduğu gibi korur.
 
 ```sh
 ./gradlew createDist
 ```
 
-Alternatively, you could get Gradle to start the GUI:
+Alternatif olarak, Gradle'ın GUI'yi başlatmasını sağlayabilirsiniz:
 
 ```sh
 ./gradlew runGui
 ```
 
-## Developer Information
+## Geliştirici Bilgileri
 
-Building and contributing is explained in details at
-[building JMeter](https://jmeter.apache.org/building.html)
-and [CONTRIBUTING.md](CONTRIBUTING.md). More information on the tasks available for
-building JMeter with Gradle is available in [gradle.md](gradle.md).
+İnşa etme ve katkıda bulunma ayrıntılı olarak şu adreste açıklanmaktadır:
+[JMeter'ı inşa etmek](https://jmeter.apache.org/building.html)
+ve [KATKIDA BULUNMAK.md](CONTRIBUTING.md). Mevcut görevler hakkında daha fazla bilgi
+JMeter'ı Gradle ile derlemek şu şekilde mevcuttur: [gradle.md](gradle.md).
 
-The code can be obtained from:
+Kod şuradan alınabilir:
 
 - https://github.com/apache/jmeter
 - https://gitbox.apache.org/repos/asf/jmeter.git
 
-## Licensing and Legal Information
+## Lisanslama ve Yasal Bilgiler
 
-For legal and licensing information, please see the following files:
+Yasal ve lisanslama bilgileri için lütfen aşağıdaki dosyalara bakın:
 
-- [LICENSE](LICENSE)
-- [NOTICE](NOTICE)
+- [Lisans](LICENSE)
+- [Bildirim](NOTICE)
 
-## Cryptographic Software Notice
+## Kriptografik Yazılım Bildirimi
 
-This distribution may include software that has been designed for use
-with cryptographic software. The country in which you currently reside
-may have restrictions on the import, possession, use, and/or re-export
-to another country, of encryption software. BEFORE using any encryption
-software, please check your country's laws, regulations and policies
-concerning the import, possession, or use, and re-export of encryption
-software, to see if this is permitted. See <https://www.wassenaar.org/>
-for more information.
+Bu dağıtım, kriptografik yazılımla birlikte kullanılmak üzere tasarlanmış yazılımları içerebilir. Şu anda ikamet ettiğiniz ülkede, şifreleme yazılımının ithalatı, bulundurulması, kullanımı ve/veya başka bir ülkeye yeniden ihraç edilmesi konusunda kısıtlamalar olabilir. Herhangi bir şifreleme
+yazılımını kullanmadan ÖNCE, lütfen şifreleme yazılımının ithalatı, bulundurulması veya kullanımı ve yeniden ihraç edilmesiyle ilgili ülkenizin yasalarını, yönetmeliklerini ve politikalarını kontrol edin. Daha fazla bilgi için <https://www.wassenaar.org/> adresine bakın.
 
-The U.S. Government Department of Commerce, Bureau of Industry and
-Security (BIS), has classified this software as Export Commodity
-Control Number (ECCN) 5D002.C.1, which includes information security
-software using or performing cryptographic functions with asymmetric
-algorithms. The form and manner of this Apache Software Foundation
-distribution makes it eligible for export under the License Exception
-ENC Technology Software Unrestricted (TSU) exception (see the BIS
-Export Administration Regulations, Section 740.13) for both object
-code and source code.
+ABD Ticaret Bakanlığı, Sanayi ve
+Güvenlik Bürosu (BIS), bu yazılımı, asimetrik algoritmalarla kriptografik işlevleri kullanan veya gerçekleştiren bilgi güvenliği
+yazılımlarını içeren İhracat Emtia
+Kontrol Numarası (ECCN) 5D002.C.1 olarak sınıflandırmıştır. Bu Apache Yazılım Vakfı
+dağıtımının biçimi ve tarzı, hem nesne kodu hem de kaynak kodu için Lisans İstisnası
+ENC Teknoloji Yazılımı Sınırsız (TSU) istisnası (bkz. BIS
+İhracat İdaresi Yönetmelikleri, Bölüm 740.13) kapsamında ihraç edilmeye uygun hale getirir.
 
-The following provides more details on the included software that
-may be subject to export controls on cryptographic software:
+Aşağıda, kriptografik yazılımlarda ihracat kontrollerine tabi olabilecek dahil edilen yazılım hakkında daha fazla ayrıntı verilmektedir:
 
-Apache JMeter interfaces with the
-Java Secure Socket Extension (JSSE) API to provide
+Apache JMeter, HTTPS desteği sağlamak için Java Secure Socket Extension (JSSE) API'siyle arayüz oluşturur
 
-- HTTPS support
+- NTLM kimlik doğrulaması sağlamak için Apache JMeter (Apache HttpClient4 aracılığıyla) Java Cryptography Extension (JCE) API'siyle arayüz oluşturur
 
-Apache JMeter interfaces (via Apache HttpClient4) with the
-Java Cryptography Extension (JCE) API to provide
+- Apache JMeter, JSSE veya JCE'nin hiçbir uygulamasını içermez.
 
-- NTLM authentication
+## Teşekkürler
 
-Apache JMeter does not include any implementation of JSSE or JCE.
+**Apache JMeter'ı kullandığınız için teşekkür ederiz.**
 
-## Thanks
+### Üçüncü taraf bildirimleri
 
-**Thank you for using Apache JMeter.**
+* mxparser için bildirim:
 
-### Third party notices
-
-* Notice for mxparser:
-
-  >  This product includes software developed by the Indiana
-  >  University Extreme! Lab.  For further information please visit
-  >  http://www.extreme.indiana.edu/
+> Bu ürün, Indiana Üniversitesi Extreme! Lab tarafından geliştirilen
+> yazılımı içerir. Daha fazla bilgi için lütfen şu adresi ziyaret edin
+> http://www.extreme.indiana.edu/
